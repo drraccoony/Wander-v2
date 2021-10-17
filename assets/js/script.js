@@ -118,12 +118,12 @@ $("#searchBtn").click(function () {
 
 function renderParks(arr) {
   let parkNum = 0;
-  let parkListUl = `<ul id="park-list-ul"></ul>`;
+  let parkListUl = `<ul id="park-list-ul" class="list-disc"></ul>`;
   let parkList = ``;
 
   for (let parks of arr) {
     let parkName = parks.fullName;
-    let parkListLi = `<li id='park-${parkNum}'><a id='park-url-${parkNum}' href='#' onclick='openPark(${parkNum})'>${parkName}</a></li>`;
+    let parkListLi = `<li class="underline" id='park-${parkNum}'><a id='park-url-${parkNum}' href='#' onclick='openPark(${parkNum})'>${parkName}</a></li>`;
     parkList += parkListLi;
     parkNum++;
   }
